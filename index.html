@@ -3,19 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#110a1a">
+<meta name="theme-color" content="#15123d">
 <title>Intesa Vincente</title>
 <meta name="description" content="Il gioco dell'Intesa Vincente per 3 telefoni collegati: due suggeritori vedono la parola, il terzo indovina.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M30 14c0-6 4-9 8-10l2 3c-4 1-6 3-6 7z' fill='%2386e34e'/%3E%3Cellipse cx='20' cy='38' rx='14' ry='20' fill='%23e8700f'/%3E%3Cellipse cx='44' cy='38' rx='14' ry='20' fill='%23e8700f'/%3E%3Cellipse cx='32' cy='38' rx='14' ry='22' fill='%23ff8a1f'/%3E%3Cpath d='M18 32l7-6 3 8zM46 32l-7-6-3 8zM16 42q16 14 32 0l-5 2-3 4-3-4-5 0-3 4-3-4z' fill='%23ffe08a'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ffc23d'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='900' text-anchor='middle' fill='%2315123d'%3EIV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Creepster&family=Figtree:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;600;800&display=swap">
 <style>
 /* Layout: una console da studio TV a schermo unico. Timer grande in alto, cartellino della parola al centro, pulsantiera in basso. */
 :root{
-  --bg:#110a1a; --bg2:#2b1240; --panel:#22122f; --line:#4b2a62;
-  --fg:#fbefdf; --muted:#bba5c8;
-  --gold:#ff8a1f; --red:#ff3b4e; --green:#86e34e; --blue:#b48cff;
-  --spooky:'Creepster','Big Shoulders Display',cursive;
+  --bg:#15123d; --bg2:#1d1957; --panel:#232069; --line:#3d3a8c;
+  --fg:#f5f2ff; --muted:#aaa5da;
+  --gold:#ffc23d; --red:#ff4d5e; --green:#2fd487; --blue:#56b8ff;
   --display:'Big Shoulders Display','Impact','Arial Narrow',sans-serif;
   --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
   color-scheme:dark;
@@ -270,7 +269,7 @@ button.small{padding:8px 12px;font-size:14px;flex:0 0 auto}
 .share{flex:none;display:inline-flex;align-items:center;gap:6px}
 .share::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l5 5h-3v7h-4V8H7z M4 14h3v4h10v-4h3v7H4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l5 5h-3v7h-4V8H7z M4 14h3v4h10v-4h3v7H4z'/%3E%3C/svg%3E") center/contain no-repeat}
 dialog#notesDlg{border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--fg);padding:20px;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto}
-dialog#notesDlg::backdrop{background:rgba(12,4,18,.7)}
+dialog#notesDlg::backdrop{background:rgba(8,6,30,.7)}
 .verbtn{background:none;border:0;padding:4px 6px;margin:-4px -6px;font:inherit;font-size:12px;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer;border-radius:6px}
 .verbtn:hover{color:var(--fg)}
 .rel{display:flex;flex-direction:column;gap:6px;padding:12px 14px;background:var(--bg);border-radius:12px;border-left:4px solid var(--line)}
@@ -294,7 +293,7 @@ dialog#notesDlg::backdrop{background:rgba(12,4,18,.7)}
 .chip.new{background:var(--gold);color:var(--bg)}
 .rel ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:15px}
 dialog#shareDlg{border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--fg);padding:20px;width:min(380px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto}
-dialog#shareDlg::backdrop{background:rgba(12,4,18,.7)}
+dialog#shareDlg::backdrop{background:rgba(8,6,30,.7)}
 .dlg{display:flex;flex-direction:column;gap:14px;align-items:stretch}
 .qr{background:#fff;border-radius:12px;padding:14px;align-self:center;width:min(260px,100%);aspect-ratio:1;max-width:100%;display:grid;place-items:center}
 .qr svg,.qr img{width:100%;height:100%;display:block}
@@ -311,23 +310,23 @@ dialog#shareDlg::backdrop{background:rgba(12,4,18,.7)}
 #home h1.yz-shake span{animation:yzHue 2.4s linear 1 reverse}
 @keyframes yzShake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-4px,2px) rotate(-1.5deg)}50%{transform:translate(3px,-2px) rotate(1deg)}75%{transform:translate(-2px,-1px) rotate(-.5deg)}100%{transform:translate(0,0) rotate(0)}}
 @keyframes yzHue{0%{color:var(--fg)}20%{color:var(--red)}40%{color:var(--green)}60%{color:var(--blue)}80%{color:#c77dff}100%{color:var(--gold)}}
-.chip.yz{background:linear-gradient(100deg,#c9540a 0%,var(--gold) 30%,#ffd6a3 45%,var(--gold) 60%,#c9540a 100%);background-size:250% 100%;color:var(--bg);font-size:11px;margin:0 0 0 8px;vertical-align:2px;box-shadow:inset 0 0 0 1px #ffd6a3;animation:yzShine 2.4s linear infinite}
+.chip.yz{background:linear-gradient(100deg,#e0a21f 0%,var(--gold) 30%,#fff3c4 45%,var(--gold) 60%,#e0a21f 100%);background-size:250% 100%;color:var(--bg);font-size:11px;margin:0 0 0 8px;vertical-align:2px;box-shadow:inset 0 0 0 1px #fff3c4;animation:yzShine 2.4s linear infinite}
 .chip.yz{display:inline-flex;align-items:center;justify-content:center;padding:2px 8px}
 .chip.yz svg{width:18px;height:18px;fill:var(--bg);display:block}
 @keyframes yzShine{from{background-position:100% 0}to{background-position:-150% 0}}
 .verhint{display:block;margin-top:6px;font-size:12px;color:var(--gold);min-height:1.2em}
-dialog#secretDlg{border:1px solid #c77dff;border-radius:18px;background:radial-gradient(120% 90% at 50% 0%,#4a1a5e,var(--bg) 70%);color:var(--fg);padding:24px 20px;width:min(380px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;text-align:center}
+dialog#secretDlg{border:1px solid #c77dff;border-radius:18px;background:radial-gradient(120% 90% at 50% 0%,#3a1d6e,var(--bg) 70%);color:var(--fg);padding:24px 20px;width:min(380px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;text-align:center}
 dialog#secretDlg .secTop{display:flex;align-items:center;justify-content:flex-end;gap:10px}
 dialog#secretDlg .secTop .ghost{padding:8px 12px;font-size:14px;flex:none}
-dialog#secretDlg::backdrop{background:rgba(12,4,18,.85)}
-.yzlogo{white-space:nowrap;text-transform:uppercase;font-family:var(--display);font-weight:900;font-size:clamp(56px,18vw,84px);line-height:.9;letter-spacing:.06em;background:linear-gradient(100deg,#c9540a 0%,var(--gold) 30%,#ffd6a3 45%,var(--gold) 60%,#c9540a 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:yzShine 2.4s linear infinite}
+dialog#secretDlg::backdrop{background:rgba(8,6,30,.85)}
+.yzlogo{white-space:nowrap;text-transform:uppercase;font-family:var(--display);font-weight:900;font-size:clamp(56px,18vw,84px);line-height:.9;letter-spacing:.06em;background:linear-gradient(100deg,#e0a21f 0%,var(--gold) 30%,#fff3c4 45%,var(--gold) 60%,#e0a21f 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:yzShine 2.4s linear infinite}
 .yzeq{display:flex;gap:5px;justify-content:center;align-items:flex-end;height:36px}
 .yzeq i{display:block;width:7px;border-radius:3px;background:#c77dff;animation:yzEq .5s ease-in-out infinite alternate}
 .yzeq i:nth-child(2){animation-delay:-.2s;background:var(--blue)}.yzeq i:nth-child(3){animation-delay:-.35s;background:var(--green)}.yzeq i:nth-child(4){animation-delay:-.1s;background:var(--gold)}.yzeq i:nth-child(5){animation-delay:-.4s;background:var(--red)}
 @keyframes yzEq{from{height:6px}to{height:36px}}
 .yzfound{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 dialog#pinDlg{border:1px solid var(--gold);border-radius:18px;background:var(--panel);color:var(--fg);padding:20px;width:min(340px,calc(100vw - 32px))}
-dialog#pinDlg::backdrop{background:rgba(12,4,18,.85)}
+dialog#pinDlg::backdrop{background:rgba(8,6,30,.85)}
 #pinIn{text-align:center;font-size:28px;font-weight:800;letter-spacing:.4em}
 #pinIn[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 2px color-mix(in srgb,var(--red) 40%,transparent);animation:yzShake .09s linear 4}
 /* ---------- trofei ---------- */
@@ -339,7 +338,7 @@ dialog#pinDlg::backdrop{background:rgba(12,4,18,.85)}
 .trhead{display:flex;align-items:center;gap:12px}
 .trhead .tr-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .trbar{height:8px;border-radius:99px;background:var(--bg);overflow:hidden}
-.trbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#c9540a,var(--gold),#ffd6a3);transition:width .8s ease-out}
+.trbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#e0a21f,var(--gold),#fff3c4);transition:width .8s ease-out}
 .trcounts{display:flex;gap:12px;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
 .trcounts span{display:inline-flex;align-items:center;gap:4px;color:var(--muted)}
 .trcounts span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tc)}
@@ -355,114 +354,26 @@ dialog#pinDlg::backdrop{background:rgba(12,4,18,.85)}
 .tr.locked .tr-ico svg{fill:var(--line)}
 .tr.locked .tx b{color:var(--muted)}
 /* notifica stile console */
-#trToast{position:fixed;inset:auto;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translate(-50%,-140%);margin:0;padding:10px 16px 10px 10px;border:0;border-radius:14px;background:rgba(28,12,40,.96);color:var(--fg);display:flex;align-items:center;gap:12px;width:max-content;max-width:calc(100vw - 32px);box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 1px color-mix(in srgb,var(--tc) 50%,transparent);z-index:60;transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
+#trToast{position:fixed;inset:auto;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translate(-50%,-140%);margin:0;padding:10px 16px 10px 10px;border:0;border-radius:14px;background:rgba(18,16,48,.96);color:var(--fg);display:flex;align-items:center;gap:12px;width:max-content;max-width:calc(100vw - 32px);box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 1px color-mix(in srgb,var(--tc) 50%,transparent);z-index:60;transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
 #trToast:not(:popover-open):not(.show){display:none}
 #trToast.show{transform:translate(-50%,0)}
 #trToast .tx{display:flex;flex-direction:column;gap:1px;min-width:0}
 #trToast .tx small{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 #trToast .tx b{font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#trToast.t-plat{background:linear-gradient(100deg,#1e2a1a,#4a1a5e)}
+#trToast.t-plat{background:linear-gradient(100deg,#1b2d4f,#3a1d6e)}
 @media (prefers-reduced-motion:reduce){#trToast{transition:none}}
-.perfect{font-family:var(--display);font-weight:900;font-size:clamp(30px,9vw,44px);line-height:1;text-transform:uppercase;letter-spacing:.04em;color:var(--bg);background:linear-gradient(90deg,var(--gold),#ffbe6b,var(--gold));padding:10px 18px;border-radius:12px;box-shadow:0 6px 0 color-mix(in srgb,var(--gold) 55%,#000);transform:rotate(-2deg);animation:yzPop .5s cubic-bezier(.3,1.6,.5,1)}
+.perfect{font-family:var(--display);font-weight:900;font-size:clamp(30px,9vw,44px);line-height:1;text-transform:uppercase;letter-spacing:.04em;color:var(--bg);background:linear-gradient(90deg,var(--gold),#ffe28a,var(--gold));padding:10px 18px;border-radius:12px;box-shadow:0 6px 0 color-mix(in srgb,var(--gold) 55%,#000);transform:rotate(-2deg);animation:yzPop .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes yzPop{from{transform:rotate(-2deg) scale(.3);opacity:0}to{transform:rotate(-2deg) scale(1);opacity:1}}
 #confetti{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;pointer-events:none;z-index:50}
 @media (prefers-reduced-motion:reduce){.banner{animation:none}button{transition:none}#home h1.yz-shake,#home h1.yz-shake span,.perfect,.yzeq i,.chip.yz,.yzlogo{animation:none}}
-
-/* ---------- Halloween ---------- */
-body{background:radial-gradient(70% 45% at 85% -5%,rgba(255,138,31,.16),transparent 70%) no-repeat fixed,radial-gradient(120% 80% at 50% 0%,var(--bg2),var(--bg) 70%) no-repeat fixed;background-color:var(--bg)}
-.wrap{position:relative;z-index:1}
-h1{font-family:var(--spooky);font-weight:400;letter-spacing:.03em;line-height:.95;text-shadow:0 3px 0 rgba(0,0,0,.45)}
-h1 span{color:var(--gold);text-shadow:0 0 18px rgba(255,138,31,.55),0 3px 0 rgba(0,0,0,.45)}
-.yzlogo{font-family:var(--spooky);font-weight:400}
-.hw-badge{display:flex;align-items:center;justify-content:center;gap:10px;margin:-6px 0 0;font-family:var(--spooky);font-size:24px;letter-spacing:.06em;color:var(--green);text-shadow:0 0 12px rgba(134,227,78,.45)}
-.pk{width:34px;height:34px;flex:none;filter:drop-shadow(0 0 8px rgba(255,138,31,.55));animation:pkBob 2.6s ease-in-out infinite}
-.pk2{animation-delay:-1.3s}
-.pk-face{fill:#ffe08a;animation:pkGlow 1.8s ease-in-out infinite alternate}
-@keyframes pkBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-4px) rotate(4deg)}}
-@keyframes pkGlow{from{fill:#ffe08a}to{fill:#ffb02e}}
-.hw-endpk .pk{width:56px;height:56px}
-/* bottoni e riquadri con un tocco di bagliore */
-button:not(.ghost):not(.tab):not(.role):not(.verbtn):not(.qr){box-shadow:0 0 0 1px rgba(0,0,0,.25),0 4px 14px rgba(0,0,0,.35)}
-.mode-online{background:color-mix(in srgb,var(--gold) 9%,var(--panel));box-shadow:0 0 24px rgba(255,138,31,.12)}
-.mode-local{background:color-mix(in srgb,var(--blue) 9%,var(--panel));box-shadow:0 0 24px rgba(180,140,255,.12)}
-.code{text-shadow:0 0 22px rgba(255,138,31,.5)}
-.final{text-shadow:0 0 30px rgba(255,138,31,.45)}
-/* ragnatela nell'angolo del cartellino della parola */
-.card::after,.half::after{content:"";position:absolute;top:0;right:0;width:70px;height:70px;pointer-events:none;opacity:.22;border-top-right-radius:16px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 170'%3E%3Cpath d='M0%200L170.0%200.0M0%200L164.2%2044.0M0%200L147.2%2085.0M0%200L120.2%20120.2M0%200L85.0%20147.2M0%200L44.0%20164.2M0%200L0.0%20170.0M28.0%200.0Q23.9%203.1%2027.0%207.2Q22.2%209.2%2024.2%2014.0Q19.1%2014.7%2019.8%2019.8Q14.7%2019.1%2014.0%2024.2Q9.2%2022.2%207.2%2027.0Q3.1%2023.9%200.0%2028.0M56.0%200.0Q47.7%206.3%2054.1%2014.5Q44.5%2018.4%2048.5%2028.0Q38.2%2029.3%2039.6%2039.6Q29.3%2038.2%2028.0%2048.5Q18.4%2044.5%2014.5%2054.1Q6.3%2047.7%200.0%2056.0M84.0%200.0Q71.6%209.4%2081.1%2021.7Q66.7%2027.6%2072.7%2042.0Q57.3%2044.0%2059.4%2059.4Q44.0%2057.3%2042.0%2072.7Q27.6%2066.7%2021.7%2081.1Q9.4%2071.6%200.0%2084.0M112.0%200.0Q95.5%2012.6%20108.2%2029.0Q89.0%2036.9%2097.0%2056.0Q76.4%2058.6%2079.2%2079.2Q58.6%2076.4%2056.0%2097.0Q36.9%2089.0%2029.0%20108.2Q12.6%2095.5%200.0%20112.0M140.0%200.0Q119.4%2015.7%20135.2%2036.2Q111.2%2046.1%20121.2%2070.0Q95.5%2073.3%2099.0%2099.0Q73.3%2095.5%2070.0%20121.2Q46.1%20111.2%2036.2%20135.2Q15.7%20119.4%200.0%20140.0M166.0%200.0Q141.5%2018.6%20160.3%2043.0Q131.9%2054.6%20143.8%2083.0Q113.3%2086.9%20117.4%20117.4Q86.9%20113.3%2083.0%20143.8Q54.6%20131.9%2043.0%20160.3Q18.6%20141.5%200.0%20166.0' fill='none' stroke='%23110a1a' stroke-width='3'/%3E%3C/svg%3E") top right/100% no-repeat;transform:scaleX(-1)}
-.card.hide::after,.card.gap::after,.half.gap::after,.half.end::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 170'%3E%3Cpath d='M0%200L170.0%200.0M0%200L164.2%2044.0M0%200L147.2%2085.0M0%200L120.2%20120.2M0%200L85.0%20147.2M0%200L44.0%20164.2M0%200L0.0%20170.0M28.0%200.0Q23.9%203.1%2027.0%207.2Q22.2%209.2%2024.2%2014.0Q19.1%2014.7%2019.8%2019.8Q14.7%2019.1%2014.0%2024.2Q9.2%2022.2%207.2%2027.0Q3.1%2023.9%200.0%2028.0M56.0%200.0Q47.7%206.3%2054.1%2014.5Q44.5%2018.4%2048.5%2028.0Q38.2%2029.3%2039.6%2039.6Q29.3%2038.2%2028.0%2048.5Q18.4%2044.5%2014.5%2054.1Q6.3%2047.7%200.0%2056.0M84.0%200.0Q71.6%209.4%2081.1%2021.7Q66.7%2027.6%2072.7%2042.0Q57.3%2044.0%2059.4%2059.4Q44.0%2057.3%2042.0%2072.7Q27.6%2066.7%2021.7%2081.1Q9.4%2071.6%200.0%2084.0M112.0%200.0Q95.5%2012.6%20108.2%2029.0Q89.0%2036.9%2097.0%2056.0Q76.4%2058.6%2079.2%2079.2Q58.6%2076.4%2056.0%2097.0Q36.9%2089.0%2029.0%20108.2Q12.6%2095.5%200.0%20112.0M140.0%200.0Q119.4%2015.7%20135.2%2036.2Q111.2%2046.1%20121.2%2070.0Q95.5%2073.3%2099.0%2099.0Q73.3%2095.5%2070.0%20121.2Q46.1%20111.2%2036.2%20135.2Q15.7%20119.4%200.0%20140.0M166.0%200.0Q141.5%2018.6%20160.3%2043.0Q131.9%2054.6%20143.8%2083.0Q113.3%2086.9%20117.4%20117.4Q86.9%20113.3%2083.0%20143.8Q54.6%20131.9%2043.0%20160.3Q18.6%20141.5%200.0%20166.0' fill='none' stroke='%23fbefdf' stroke-width='3'/%3E%3C/svg%3E")}
-/* decorazioni di sfondo */
-.hw-deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.hw-moon{position:absolute;top:-46px;right:-46px;width:130px;height:130px;border-radius:50%;
-  background:radial-gradient(circle at 38% 40%,#fff6e0 0 30%,#ffe3a8 55%,#f5c76a 100%);
-  box-shadow:0 0 60px 20px rgba(255,214,140,.22),0 0 140px 50px rgba(255,138,31,.12);opacity:.85}
-.hw-moon::before,.hw-moon::after{content:"";position:absolute;border-radius:50%;background:rgba(200,150,70,.35)}
-.hw-moon::before{width:20px;height:20px;left:34px;top:70px}
-.hw-moon::after{width:12px;height:12px;left:70px;top:88px}
-.hw-web{position:absolute;top:0;left:0;width:150px;height:150px;opacity:.28}
-.hw-web path{fill:none;stroke:var(--fg);stroke-width:1.2}
-.hw-spider{position:absolute;top:0;left:92px;display:flex;flex-direction:column;align-items:center;color:#05020a;animation:spDrop 7s ease-in-out infinite;transform-origin:top center}
-.hw-spider i{display:block;width:1px;height:90px;background:color-mix(in srgb,var(--fg) 45%,transparent)}
-.hw-spider svg{width:28px;height:28px;margin-top:-4px;filter:drop-shadow(0 0 4px rgba(255,138,31,.35))}
-@keyframes spDrop{0%,100%{transform:translateY(-40px) rotate(2deg)}45%{transform:translateY(10px) rotate(-3deg)}60%{transform:translateY(4px) rotate(2deg)}}
-.hw-bat{position:absolute;left:-80px;width:52px;color:#05020a;opacity:.85;animation:batFly 16s linear infinite}
-.hw-bat svg{width:100%;display:block;fill:currentColor;animation:batFlap .28s ease-in-out infinite alternate;transform-origin:center}
-.hw-bat.b1{top:16%}
-.hw-bat.b2{top:30%;width:34px;animation-duration:21s;animation-delay:-7s;opacity:.65}
-.hw-bat.b3{top:9%;width:26px;animation-duration:25s;animation-delay:-15s;opacity:.5}
-@keyframes batFly{0%{transform:translate(0,0)}25%{transform:translate(30vw,-30px)}50%{transform:translate(60vw,20px)}75%{transform:translate(90vw,-20px)}100%{transform:translate(calc(100vw + 160px),10px)}}
-@keyframes batFlap{from{transform:scaleY(1)}to{transform:scaleY(.45)}}
-.hw-fog{position:absolute;left:-20%;right:-20%;bottom:-40px;height:180px;background:radial-gradient(50% 60% at 30% 70%,rgba(180,140,255,.14),transparent 70%),radial-gradient(45% 55% at 75% 75%,rgba(134,227,78,.08),transparent 70%);animation:fog 14s ease-in-out infinite alternate}
-@keyframes fog{to{transform:translateX(8%)}}
-button.ghost{background:rgba(17,10,26,.78);backdrop-filter:blur(2px)}
-.hw-grave{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;display:block;filter:drop-shadow(0 -2px 6px rgba(180,140,255,.14))}
-.hw-grave .pk-face{fill:#ffe08a}
-.hw-fog{z-index:1}
-body:not(.local) .wrap{padding-bottom:max(28px,130px)}
-body.local .hw-grave{display:none}
-@media (min-width:700px){.hw-grave{height:190px}}
-/* un solo dispositivo: niente pipistrelli né nebbia in partita, così non disturbano */
-body.local .hw-bat,body.local .hw-fog,body.local .hw-spider{display:none}
-@media (prefers-reduced-motion:reduce){.pk,.pk-face,.hw-spider,.hw-bat,.hw-bat svg,.hw-fog{animation:none}.hw-bat{display:none}}
 </style>
 </head>
 <body>
-<div class="hw-deco" aria-hidden="true">
-  <div class="hw-moon"></div>
-  <svg class="hw-web" viewBox="0 0 170 170"><path d="M0 0L170.0 0.0M0 0L164.2 44.0M0 0L147.2 85.0M0 0L120.2 120.2M0 0L85.0 147.2M0 0L44.0 164.2M0 0L0.0 170.0M28.0 0.0Q23.9 3.1 27.0 7.2Q22.2 9.2 24.2 14.0Q19.1 14.7 19.8 19.8Q14.7 19.1 14.0 24.2Q9.2 22.2 7.2 27.0Q3.1 23.9 0.0 28.0M56.0 0.0Q47.7 6.3 54.1 14.5Q44.5 18.4 48.5 28.0Q38.2 29.3 39.6 39.6Q29.3 38.2 28.0 48.5Q18.4 44.5 14.5 54.1Q6.3 47.7 0.0 56.0M84.0 0.0Q71.6 9.4 81.1 21.7Q66.7 27.6 72.7 42.0Q57.3 44.0 59.4 59.4Q44.0 57.3 42.0 72.7Q27.6 66.7 21.7 81.1Q9.4 71.6 0.0 84.0M112.0 0.0Q95.5 12.6 108.2 29.0Q89.0 36.9 97.0 56.0Q76.4 58.6 79.2 79.2Q58.6 76.4 56.0 97.0Q36.9 89.0 29.0 108.2Q12.6 95.5 0.0 112.0M140.0 0.0Q119.4 15.7 135.2 36.2Q111.2 46.1 121.2 70.0Q95.5 73.3 99.0 99.0Q73.3 95.5 70.0 121.2Q46.1 111.2 36.2 135.2Q15.7 119.4 0.0 140.0M166.0 0.0Q141.5 18.6 160.3 43.0Q131.9 54.6 143.8 83.0Q113.3 86.9 117.4 117.4Q86.9 113.3 83.0 143.8Q54.6 131.9 43.0 160.3Q18.6 141.5 0.0 166.0"/></svg>
-  <div class="hw-spider"><i></i><svg viewBox="0 0 40 40"><g stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M14 18l-8-6-4 2M14 21l-10-1-3 4M15 24l-8 5-1 5M17 26l-5 8M26 18l8-6 4 2M26 21l10-1 3 4M25 24l8 5 1 5M23 26l5 8"/></g><ellipse cx="20" cy="22" rx="7" ry="8" fill="currentColor"/><circle cx="20" cy="13" r="5" fill="currentColor"/><circle cx="18" cy="12" r="1.3" fill="#ff3b4e"/><circle cx="22" cy="12" r="1.3" fill="#ff3b4e"/></svg></div>
-  <svg class="hw-grave" viewBox="0 0 400 130" preserveAspectRatio="xMidYMax slice">
-    <defs><radialGradient id="pkGlow"><stop offset="0" stop-color="#ff8a1f" stop-opacity=".55"/><stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/></radialGradient></defs>
-    <path d="M0 78Q90 50 190 70T400 60V130H0z" fill="#1c1029"/>
-    <g fill="#2a1a3b">
-      <rect x="150" y="52" width="14" height="24" rx="7"/>
-      <path d="M232 46h4v8h7v4h-7v14h-4V58h-7v-4h7z"/>
-      <rect x="196" y="60" width="10" height="14" rx="5"/>
-      <rect x="355" y="46" width="13" height="20" rx="6"/>
-    </g>
-    <path d="M44 130c2-30 4-52 2-72M46 86c-8-6-14-14-16-24M30 62c-4-2-6-6-6-10M30 62c2-4 0-9-2-12M46 72c9-8 16-12 26-14M72 58c4-4 5-9 4-13M72 58c5 0 9 2 12 5M46 58c-2-10 2-18 8-24M54 34c0-5 3-8 6-10M54 34c-4-3-6-7-6-11" fill="none" stroke="#0b0611" stroke-width="5" stroke-linecap="round"/>
-    <path d="M44 130c1-20 2-40 2-72" stroke="#0b0611" stroke-width="10" stroke-linecap="round"/>
-    <path d="M69 50l3-4 2 1 4-2-2 3 1 3h-6z" fill="#0b0611"/>
-    <path d="M0 102Q110 84 220 98T400 92V130H0z" fill="#0b0611"/>
-    <g fill="#33213f">
-      <path d="M274 104V82a14 14 0 0 1 28 0v22z"/>
-      <path d="M338 104V88h-9v-6h9v-8h6v8h9v6h-9v16z"/>
-      <path d="M112 104l3-22a11 11 0 0 1 22 3l-3 21z"/>
-    </g>
-    <text x="288" y="92" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="9" fill="#120a1a" letter-spacing=".5">RIP</text>
-    <path d="M276 82h24M280 87" stroke="#4a3359" stroke-width="1"/>
-    <circle cx="316" cy="104" r="20" fill="url(#pkGlow)"/>
-    <g transform="translate(306 94)"><path d="M9 3c0-2 1-3 3-3l1 1c-2 0-2 1-2 2z" fill="#3b6b1f"/><ellipse cx="6" cy="10" rx="5" ry="6" fill="#c9540a"/><ellipse cx="14" cy="10" rx="5" ry="6" fill="#c9540a"/><ellipse cx="10" cy="10" rx="5" ry="7" fill="#ff8a1f"/><path class="pk-face" d="M6 8l2-2 1 3zM14 8l-2-2-1 3zM6 12q4 4 8 0l-2 1-1 1-1-1-1 1-1-1z"/></g>
-    <g stroke="#0b0611" stroke-width="2" stroke-linecap="round" fill="none"><path d="M90 104l-2-6M93 104l1-7M96 104l3-5M250 100l-2-5M253 100l1-6M380 98l-2-5M383 98l2-6M20 106l-1-6M23 106l2-5"/></g>
-  </svg>
-  <div class="hw-fog"></div>
-</div>
 <div class="wrap">
 
   <!-- HOME -->
   <section id="home" class="screen">
     <div class="top" style="align-items:flex-start"><h1>Intesa <span>Vincente</span></h1><button class="ghost share" data-share>Condividi</button></div>
-    <p class="hw-badge"><svg class="pk" viewBox="0 0 64 64" aria-hidden="true"><path d="M30 15c0-6 4-9 8-10l2 3c-4 1-6 3-6 7z" fill="var(--green)"/><ellipse cx="20" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="44" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="32" cy="39" rx="14" ry="21" fill="var(--gold)"/><path class="pk-face" d="M19 33l7-7 3 9zM45 33l-7-7-3 9zM16 43q16 14 32 0l-5 2-3 4-3-4h-5l-3 4-3-4z"/></svg><span>Halloween Edition</span><svg class="pk pk2" viewBox="0 0 64 64" aria-hidden="true"><path d="M30 15c0-6 4-9 8-10l2 3c-4 1-6 3-6 7z" fill="var(--green)"/><ellipse cx="20" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="44" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="32" cy="39" rx="14" ry="21" fill="var(--gold)"/><path class="pk-face" d="M19 33l7-7 3 9zM45 33l-7-7-3 9zM16 43q16 14 32 0l-5 2-3 4-3-4h-5l-3 4-3-4z"/></svg></p>
     <p class="lede">Due suggeritori, una parola a testa. Il terzo indovina prima che scada il tempo.</p>
     <section class="mode mode-online" aria-labelledby="mOnline">
       <div class="mode-head">
@@ -618,7 +529,7 @@ body.local .hw-bat,body.local .hw-fog,body.local .hw-spider{display:none}
 
     <div id="endArea" class="screen" hidden>
       <div class="box" style="align-items:center">
-        <div class="hw-endpk"><svg class="pk" viewBox="0 0 64 64" aria-hidden="true"><path d="M30 15c0-6 4-9 8-10l2 3c-4 1-6 3-6 7z" fill="var(--green)"/><ellipse cx="20" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="44" cy="39" rx="14" ry="19" fill="#d9600c"/><ellipse cx="32" cy="39" rx="14" ry="21" fill="var(--gold)"/><path class="pk-face" d="M19 33l7-7 3 9zM45 33l-7-7-3 9zM16 43q16 14 32 0l-5 2-3 4-3-4h-5l-3 4-3-4z"/></svg></div><span class="label" id="endLabel">Tempo scaduto · punteggio</span><div class="perfect" id="perfectBadge" hidden>Intesa perfetta!</div>
+        <span class="label" id="endLabel">Tempo scaduto · punteggio</span><div class="perfect" id="perfectBadge" hidden>Intesa perfetta!</div>
         <div class="final" id="finalScore">0</div>
         <p class="note" id="finalNote"></p>
       </div>
@@ -682,9 +593,11 @@ body.local .hw-bat,body.local .hw-fog,body.local .hw-spider{display:none}
 // Server pubblico gratuito che fa da "ponte" tra i telefoni. Nessun account richiesto.
 const BROKER="wss://broker.hivemq.com:8884/mqtt";
 const NS="intesa-vincente-yeezik/v1/";
-const APP_VERSION="1.3.0"; /* quando cambi versione aggiungi una voce in cima a PATCH_NOTES */
+const APP_VERSION="1.3.1"; /* quando cambi versione aggiungi una voce in cima a PATCH_NOTES */
 /* patch notes: la prima voce è la versione attuale */
 const PATCH_NOTES=[
+  {v:"1.3.1",d:"Novembre 2026",n:[
+    "Halloween è finito: torna la grafica classica. QR code, trofei e segreti restano tutti dove erano."]},
   {v:"1.3.0",d:"Halloween 2026",n:[
     "New: Halloween Edition! Nuovi colori zucca e notte, luna, ragnatele, un ragno e un cimitero nella nebbia in fondo allo schermo.",
     "New: titolo con un carattere da brivido e zucche che si illuminano."]},
@@ -1208,7 +1121,7 @@ function isPerfect(){const H=(G&&G.hist)||[];return H.length>0&&H.every(h=>h.r==
 let confT=null;
 function confetti(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const c=$("#confetti"),x=c.getContext("2d");if(!x)return;
   c.hidden=false;try{c.matches(":popover-open")&&c.hidePopover();c.showPopover&&c.showPopover()}catch(e){}const W=c.width=innerWidth*devicePixelRatio,H=c.height=innerHeight*devicePixelRatio,k=devicePixelRatio;
-  const cols=["#ff8a1f","#ffb347","#86e34e","#b48cff","#c77dff","#fbefdf","#1a0f24"];
+  const cols=["#ffc23d","#ff4d5e","#2fd487","#56b8ff","#c77dff","#f5f2ff"];
   const P=Array.from({length:160},()=>({x:W/2+(Math.random()-.5)*W*.3,y:H*.35,vx:(Math.random()-.5)*16*k,vy:(-Math.random()*16-6)*k,r:Math.random()*Math.PI,vr:(Math.random()-.5)*.4,w:(6+Math.random()*6)*k,h:(4+Math.random()*4)*k,c:cols[Math.random()*cols.length|0]}));
   const t0=performance.now();cancelAnimationFrame(confT);
   (function f(now){x.clearRect(0,0,W,H);for(const p of P){p.vy+=.45*k;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore()}
